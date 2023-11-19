@@ -4,7 +4,7 @@ public class WearShare {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
         int Hi = 77;
-        System.out.println("Hi + " + Hi);
+        System.out.println("Hi after effect " + Hi);
     }
 
 public static boolean logIn(String userName, String password) {
