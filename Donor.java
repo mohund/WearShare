@@ -6,17 +6,17 @@ public class Donor extends User {
     public Donor(int ID, String name, String password, String location, String phoneNumber, String info, User next) {
         
         super(ID, name, password, location, phoneNumber, info, next);
-
+        
     }
 
     public boolean addReward() {
-        // Imp
-        return false;
+        rewards.addReward();
+        return true;
     }
 
     public boolean deleteReward() {
-        // Imp
-        return false;
+        rewards.deleteReward();
+        return true;
     }
 
     public String toString() {
