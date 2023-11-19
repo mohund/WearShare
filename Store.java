@@ -10,7 +10,7 @@ public class Store extends User{
         this.promotions = promotions;
         this.code = code;
     }
-
+/*
     public Store searchById(User headES, int ID) {
         // Imp
         return null;
@@ -20,7 +20,9 @@ public class Store extends User{
         // Imp
         return null;
     }
+*/
 
+    
     public String toString() {
         // Imp
         return "";
