@@ -1,28 +1,20 @@
 public class Store extends User{
-
+    // Class fields
     private String promotions;
     private String code;
-    
-    
+
     // Constructor
+    public Store(){
+        this(1, "Store", "1Store", "X", "0000000000", "50", "Store");
+    }
     public Store(int ID, String name, String password, String location, String phoneNumber, String promotions, String code) {
         super(ID, name, password, location, phoneNumber);
         this.promotions = promotions;
         this.code = code;
     }
-/*
-    public Store searchById(User headES, int ID) {
-        // Imp
-        return null;
-    }
 
-    public Store searchById(User headES, String name) {
-        // Imp
-        return null;
-    }
-*/
-
-    
+    // Print store information
+    @Override
     public String toString() {
         // Imp
         return "";

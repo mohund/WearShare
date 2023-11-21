@@ -5,7 +5,16 @@ public class WearShare {
         System.out.println("Hello, World!");
         int Hi = 77;
         System.out.println("Hi after effect " + Hi);
-        // YES
+
+        User userHead = new User();
+        Beneficiary beneHead = new Beneficiary();
+        Store storeHead = new Store();
+        Donor donorHead = new Donor();
+        Association assHead = new Association();
+
+        // test
+        System.out.println(donorHead.getRewards());
+
     }
 
 public static boolean logIn(String userName, String password) {
@@ -28,7 +37,7 @@ public static boolean logIn(String userName, String password) {
         return "";
     }
 
-    public static boolean requestBenf(Beneficiary reqBenf, Association headAss, String clotheID) {
+    public static boolean requestBenf(Beneficiary reqBenf, Association headAss, int clotheID) {
         // Imp
         return false;
     }

@@ -1,6 +1,7 @@
 import java.awt.image.BufferedImage;
 
 public class Clothes {
+    // Class fields
     private int ID;
     private String type;
     private double size;
@@ -9,18 +10,16 @@ public class Clothes {
 
     // Constructor
     public Clothes (){
-        this(1, "Clothes", null, 1);
+        this(1, "Clothes", 1);
     }
     
     public Clothes(int ID, String type, double size) {
         this.ID = ID;
         this.type = type;
-        this.image = image;
         this.size = size;
         this.next = null;
+        //this.image = image;
     }
-
-
 
     // Check if it is Empty
     public boolean isEmpty() {
@@ -100,7 +99,8 @@ public class Clothes {
 
 
     //              toString  & getters & Setters
-
+    // Print clothes information
+    @Override
     public String toString() {
         // Imp
         return "";

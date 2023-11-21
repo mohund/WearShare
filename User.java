@@ -7,7 +7,7 @@ public class User {
     protected String phoneNumber;
     protected String info;
     protected User next;
-    // no
+    
     // Constructor
     public User(){
         this(1, "User", "1Use", "X", "0000000000");
@@ -25,6 +25,7 @@ public class User {
         this.next = null;
     }
 
+    // Checking username & password
     public boolean login(User headES, String userName, String password) {
         // Imp
         return false;
@@ -112,7 +113,8 @@ public class User {
     //              toString  & getters & Setters
 
 
-    // toString method
+    // Print user information
+    @Override
     public String toString() {
         // Imp
         return "";
