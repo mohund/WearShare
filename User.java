@@ -7,7 +7,7 @@ public class User {
     protected String phoneNumber;
     protected String info;
     protected User next;
-
+    // no
     // Constructor
     public User(){
         this(1, "User", "1Use", "X", "0000000000");
