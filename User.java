@@ -1,4 +1,4 @@
-public class User implements LinkedListNode<User>{
+public class User {
     // Class fields
     protected int ID;
     protected String name;
@@ -9,20 +9,108 @@ public class User implements LinkedListNode<User>{
     protected User next;
 
     // Constructor
-    public User(int ID, String name, String password, String location, String phoneNumber, String info, User next) {
+    public User(){
+        this(1, "User", "1Use", "X", "0000000000");
+    }
+    public User(int ID, String name, String password, String location, String phoneNumber){
+        this(ID, name, password, location, phoneNumber, "");
+    }
+    public User(int ID, String name, String password, String location, String phoneNumber, String info) {
         this.ID = ID;
         this.name = name;
         this.password = password;
         this.location = location;
         this.phoneNumber = phoneNumber;
         this.info = info;
-        this.next = next;
+        this.next = null;
     }
 
     public boolean login(User headES, String userName, String password) {
         // Imp
         return false;
     }
+
+    // Check if it is Empty
+    public boolean isEmpty() {
+        return this.getNext() == null;
+    }
+
+    // Printing information for all users in the list
+    public void printList() {
+        User temp = this;
+        while (temp != null) {
+            System.out.println(temp.toString());
+             temp = temp.getNext();
+        }
+    }
+
+    // Find User based on ID
+    public User searchByID(int ID) {
+        User temp = this;
+            while (temp != null) {
+                if (temp.getID() == ID) {
+                return temp;
+            }
+            temp = temp.getNext();
+        }
+        return null;
+    }
+
+    // Add User in First
+    public User addFirst(User newHead) {
+        newHead.setNext(this);
+        return newHead;
+    }
+
+    // Add User in Last
+    public void addLast(User newNode) {
+        User temp = this;
+        while (temp.getNext() != null) {
+            temp = temp.getNext();
+        }
+        temp.setNext(newNode);
+    }
+
+    // Remove Head (First node)
+    public void removeFirst() {
+        if (this.next == null) return;
+        this.next = this.next.getNext();
+    }
+    
+
+    // Remove Last node
+    public void removeLast() {
+        if (this.next == null) return;
+    
+        User temp = this;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+    
+    // Remove a target User
+    public boolean removeItem(User target) {
+        if (this.next == null) return false;
+        if (this.next.getID() == target.getID()) {
+            this.next = this.next.next;
+            return true;
+        }
+    
+        User temp = this;
+        while (temp.next != null) {
+            if (temp.next.getID() == target.getID()) {
+                temp.next = temp.next.next;
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+    
+
+    //              toString  & getters & Setters
+
 
     // toString method
     public String toString() {
@@ -31,6 +119,15 @@ public class User implements LinkedListNode<User>{
     }
 
     // Getter and setter methods
+
+    public int getID() {
+        return this.ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
     public String getName() {
         return name;
     }

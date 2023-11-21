@@ -3,9 +3,9 @@ public class Donor extends User {
     private Reward rewards;
 
     // Constructor
-    public Donor(int ID, String name, String password, String location, String phoneNumber, String info, User next) {
+    public Donor(int ID, String name, String password, String location, String phoneNumber) {
         
-        super(ID, name, password, location, phoneNumber, info, next);
+        super(ID, name, password, location, phoneNumber);
         
     }
 

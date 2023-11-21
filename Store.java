@@ -3,10 +3,10 @@ public class Store extends User{
     private String promotions;
     private String code;
     
-
+    
     // Constructor
-    public Store(int ID, String name, String password, String location, String phoneNumber, String info, User next, String promotions, String code) {
-        super(ID, name, password, location, phoneNumber, info, next);
+    public Store(int ID, String name, String password, String location, String phoneNumber, String promotions, String code) {
+        super(ID, name, password, location, phoneNumber);
         this.promotions = promotions;
         this.code = code;
     }

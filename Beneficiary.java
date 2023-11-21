@@ -7,8 +7,8 @@ public class Beneficiary extends User{
 
     // with date
     //     public Beneficiary(int ID, String name, String password, String location, String phoneNumber, String info, User next, Date birthDate, int weight, int tall, double shoesSize, Clothes headClothes) {
-    public Beneficiary(int ID, String name, String password, String location, String phoneNumber, String info, User next, int weight, int tall, double shoesSize, Clothes headClothes) {
-        super(ID, name, password, location, phoneNumber, info, next);
+    public Beneficiary(int ID, String name, String password, String location, String phoneNumber, int weight, int tall, double shoesSize, Clothes headClothes) {
+        super(ID, name, password, location, phoneNumber);
         this.weight = weight;
         this.tall = tall;
         this.shoesSize = shoesSize;
