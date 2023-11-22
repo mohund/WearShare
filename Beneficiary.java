@@ -48,6 +48,9 @@ public class Beneficiary extends User{
     public void setShoeSize(double shoesSize) {
         this.shoesSize = shoesSize;
     }
+    public Clothes getheadClothes() {
+        return headClothes;
+    }
 
     
 }

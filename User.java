@@ -26,11 +26,19 @@ public class User {
     }
 
     // Checking username & password
-    public boolean login(User headES, String userName, String password) {
-        // Imp
+    public boolean login(User headES, String userName, String password) {  
+        User temp = headES;
+            while (temp != null) {
+                if (temp.getName() == userName && temp.getPassword() == password) {
+                return true;
+            }
+            temp = temp.getNext();
+        }  
         return false;
     }
 
+
+    
     // Check if it is Empty
     public boolean isEmpty() {
         return this.getNext() == null;
